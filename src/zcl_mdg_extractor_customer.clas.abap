@@ -1,12 +1,12 @@
-class ZCL_MDG_EXTRACTOR_CUSTOMER definition
-  public
-  final
-  create public .
+CLASS zcl_mdg_extractor_customer DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
 
-public section.
+  PUBLIC SECTION.
 
-  types:
-    BEGIN OF ty_kna1_t,
+    TYPES:
+      BEGIN OF ty_kna1_t,
         _comment             TYPE zcomment_txt,
         _action_code         TYPE c LENGTH 10,
         source_id            TYPE kunnr,
@@ -213,19 +213,19 @@ public section.
         /vso/r_one_mat       TYPE kna1-/vso/r_one_mat,
         /vso/r_one_sort      TYPE kna1-/vso/r_one_sort,
       END OF ty_kna1_t .
-  types:
-    ty_kna1 TYPE STANDARD TABLE OF ty_kna1_t WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_tab,
+    TYPES:
+      ty_kna1 TYPE STANDARD TABLE OF ty_kna1_t WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_tab,
         targ_struc TYPE string,
         targ_field TYPE string,
         rule_typ   TYPE string,
         rule       TYPE string,
       END OF ty_tab .
-  types:
-    ty_tab1 TYPE STANDARD TABLE OF ty_tab .
-  types:
-    BEGIN OF ty_but000_str,
+    TYPES:
+      ty_tab1 TYPE STANDARD TABLE OF ty_tab .
+    TYPES:
+      BEGIN OF ty_but000_str,
         _comment          TYPE zcomment_txt,
 *        _action_code      TYPE c LENGTH 10,
         source_id         TYPE kunnr,
@@ -352,10 +352,10 @@ public section.
         kbanks            TYPE banks,
         kbankl            TYPE bankk,
       END OF ty_but000_str .
-  types:
-    ty_but000 TYPE STANDARD TABLE OF ty_but000_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_but020_str,
+    TYPES:
+      ty_but000 TYPE STANDARD TABLE OF ty_but000_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_but020_str,
         _comment          TYPE zcomment_txt,
         _action_code      TYPE c LENGTH 10,
         source_id         TYPE kunnr,
@@ -375,10 +375,10 @@ public section.
         addr_move_date    TYPE bu_addr_move_date,
         source_recency    TYPE c LENGTH 30,
       END OF ty_but020_str .
-  types:
-    ty_but020 TYPE STANDARD TABLE OF ty_but020_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_but021_str ,
+    TYPES:
+      ty_but020 TYPE STANDARD TABLE OF ty_but020_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_but021_str ,
         _comment          TYPE zcomment_txt,
         _action_code      TYPE c LENGTH 10,
         source_id         TYPE kunnr,
@@ -391,10 +391,10 @@ public section.
         xdfadu            TYPE bu_xdfadu,
         source_recency    TYPE c LENGTH 30,
       END OF ty_but021_str .
-  types:
-    ty_but021 TYPE STANDARD TABLE OF ty_but021_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_adrc_str,
+    TYPES:
+      ty_but021 TYPE STANDARD TABLE OF ty_but021_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_adrc_str,
         _comment          TYPE zcomment_txt,
         _action_code      TYPE c LENGTH 10,
         source_id         TYPE kunnr,
@@ -501,10 +501,10 @@ public section.
         duns              TYPE ad_uuid_belated,
         dunsp4            TYPE ad_id_category,
       END OF ty_adrc_str .
-  types:
-    ty_adrc TYPE STANDARD TABLE OF ty_adrc_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_adr2_str,
+    TYPES:
+      ty_adrc TYPE STANDARD TABLE OF ty_adrc_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_adr2_str,
         _comment          TYPE zcomment_txt,
         _action_code      TYPE c LENGTH 10,
         source_id         TYPE kunnr,
@@ -526,10 +526,10 @@ public section.
         valid_to          TYPE ad_valto,
         source_recency    TYPE c LENGTH 30,
       END OF ty_adr2_str .
-  types:
-    ty_adr2 TYPE STANDARD TABLE OF ty_adr2_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_adr6_str,
+    TYPES:
+      ty_adr2 TYPE STANDARD TABLE OF ty_adr2_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_adr6_str,
         __comment         TYPE zcomment_txt,
         _action_code      TYPE c LENGTH 10,
         source_id         TYPE kunnr,
@@ -550,10 +550,10 @@ public section.
         valid_to          TYPE ad_valto,
         source_recency    TYPE c LENGTH 30,
       END OF ty_adr6_str .
-  types:
-    ty_adr6 TYPE STANDARD TABLE OF ty_adr6_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_but0bk_str,
+    TYPES:
+      ty_adr6 TYPE STANDARD TABLE OF ty_adr6_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_but0bk_str,
         _comment       TYPE zcomment_txt,
         _action_code   TYPE c LENGTH 10,
         source_id      TYPE kunnr,
@@ -583,10 +583,10 @@ public section.
         bp_eew_but0bk  TYPE dummy,
         source_recency TYPE c LENGTH 30,
       END OF ty_but0bk_str .
-  types:
-    ty_but0bk TYPE STANDARD TABLE OF ty_but0bk_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_assignment,
+    TYPES:
+      ty_but0bk TYPE STANDARD TABLE OF ty_but0bk_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_assignment,
         _comment             TYPE zcomment_txt,
         _action_code         TYPE c LENGTH 10,
         source_id            TYPE kunnr,
@@ -600,10 +600,10 @@ public section.
         source_recency       TYPE char10,
         target_assignment_id TYPE char20,
       END OF ty_assignment .
-  types:
-    ty_asst TYPE STANDARD TABLE OF ty_assignment WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_KNBW_str,
+    TYPES:
+      ty_asst TYPE STANDARD TABLE OF ty_assignment WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_KNBW_str,
         _comment             TYPE zcomment_txt,
         _action_code         TYPE c LENGTH 10,
         source_id            TYPE kunnr,
@@ -623,10 +623,10 @@ public section.
         source_recency       TYPE c LENGTH 30,
         target_assignment_id TYPE c LENGTH 25,
       END OF ty_KNBW_str .
-  types:
-    ty_knbw TYPE STANDARD TABLE OF ty_KNBW_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_knb1_str,
+    TYPES:
+      ty_knbw TYPE STANDARD TABLE OF ty_KNBW_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_knb1_str,
         _comment             TYPE zcomment_txt,
         _action_code         TYPE c LENGTH 10,
         source_id            TYPE kunnr,
@@ -714,10 +714,10 @@ public section.
         source_recency       TYPE c LENGTH 30,
         target_assignment_id TYPE c LENGTH 25,
       END OF ty_knb1_str .
-  types:
-    ty_knb1 TYPE STANDARD TABLE OF ty_knb1_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_knb5_str,
+    TYPES:
+      ty_knb1 TYPE STANDARD TABLE OF ty_knb1_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_knb5_str,
         _comment             TYPE zcomment_txt,
         _action_code         TYPE c LENGTH 10,
         source_id            TYPE kunnr,
@@ -735,10 +735,10 @@ public section.
         source_recency       TYPE c LENGTH 30,
         target_assignment_id TYPE c LENGTH 25,
       END OF ty_knb5_str .
-  types:
-    ty_knb5 TYPE STANDARD TABLE OF ty_knb5_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_knvv_str ,
+    TYPES:
+      ty_knb5 TYPE STANDARD TABLE OF ty_knb5_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_knvv_str ,
         _comment             TYPE zcomment_txt,
         _action_code         TYPE c LENGTH 10,
         source_id            TYPE kunnr,
@@ -848,10 +848,10 @@ public section.
         /bev1/emlgforts      TYPE c LENGTH 29,
         j_1nboesl            TYPE c LENGTH 29,
       END OF ty_knvv_str .
-  types:
-    ty_knvv TYPE STANDARD TABLE OF ty_knvv_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_knvp_str,
+    TYPES:
+      ty_knvv TYPE STANDARD TABLE OF ty_knvv_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_knvp_str,
         _comment             TYPE zcomment_txt,
         _action_code         TYPE c LENGTH 10,
         source_id            TYPE c LENGTH 20,
@@ -872,10 +872,10 @@ public section.
         source_recency       TYPE c LENGTH 20,
         target_assignment_id TYPE c LENGTH 30,
       END OF ty_knvp_str .
-  types:
-    ty_knvp TYPE STANDARD TABLE OF ty_knvp_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_tax_str,
+    TYPES:
+      ty_knvp TYPE STANDARD TABLE OF ty_knvp_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_tax_str,
         _comment       TYPE zcomment_txt,
         _action_code   TYPE c LENGTH 10,
         source_id      TYPE kunnr,
@@ -885,10 +885,10 @@ public section.
         taxnumxl       TYPE bptaxnumxl,
         source_recency TYPE c LENGTH 30,
       END OF ty_tax_str .
-  types:
-    ty_tax TYPE STANDARD TABLE OF ty_tax_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_knvi_str,
+    TYPES:
+      ty_tax TYPE STANDARD TABLE OF ty_tax_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_knvi_str,
         _comment             TYPE  zcomment_txt,
         _action_code         TYPE  c LENGTH 10,
         source_id            TYPE  kunnr,
@@ -900,10 +900,10 @@ public section.
         source_recency       TYPE  c LENGTH 30,
         target_assignment_id TYPE  c LENGTH 29,
       END OF ty_knvi_str .
-  types:
-    ty_knvi TYPE STANDARD TABLE OF ty_knvi_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_knva_str,
+    TYPES:
+      ty_knvi TYPE STANDARD TABLE OF ty_knvi_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_knva_str,
         _comment             TYPE  zcomment_txt,
         _action_code         TYPE  c LENGTH 10,
         source_id            TYPE  kunnr,
@@ -949,10 +949,10 @@ public section.
         target_assignment_id TYPE  c LENGTH 30,
         source_recency       TYPE  c LENGTH 29,
       END OF ty_knva_str .
-  types:
-    ty_knva TYPE STANDARD TABLE OF ty_knva_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_BUT0ID_str,
+    TYPES:
+      ty_knva TYPE STANDARD TABLE OF ty_knva_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_BUT0ID_str,
         _comment        TYPE  zcomment_txt,
         _action_code    TYPE  c LENGTH 10,
         source_id       TYPE  kunnr,
@@ -969,10 +969,10 @@ public section.
         bp_eew_but0id   TYPE  dummy,
         source_recency  TYPE  c LENGTH 29,
       END OF ty_BUT0ID_str .
-  types:
-    ty_BUT0ID TYPE STANDARD TABLE OF ty_BUT0ID_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_BUT0IS_str,
+    TYPES:
+      ty_BUT0ID TYPE STANDARD TABLE OF ty_BUT0ID_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_BUT0IS_str,
         _comment       TYPE  zcomment_txt,
         _action_code   TYPE  c LENGTH 10,
         source_id      TYPE  kunnr,
@@ -983,10 +983,10 @@ public section.
         bp_eew_but0is  TYPE  dummy,
         source_recency TYPE  c LENGTH 29,
       END OF ty_BUT0IS_str .
-  types:
-    ty_BUT0IS TYPE STANDARD TABLE OF ty_BUT0IS_str WITH DEFAULT KEY .
-  types:
-    BEGIN OF ty_BUT100_str,
+    TYPES:
+      ty_BUT0IS TYPE STANDARD TABLE OF ty_BUT0IS_str WITH DEFAULT KEY .
+    TYPES:
+      BEGIN OF ty_BUT100_str,
         _comment       TYPE  zcomment_txt,
         _action_code   TYPE  c LENGTH 10,
         source_id      TYPE  kunnr,
@@ -999,172 +999,172 @@ public section.
         role           TYPE bp_role,
         authority      TYPE begru,
       END OF ty_BUT100_str .
-  types:
-    ty_BUT100 TYPE STANDARD TABLE OF ty_but100_str WITH DEFAULT KEY .
+    TYPES:
+      ty_BUT100 TYPE STANDARD TABLE OF ty_but100_str WITH DEFAULT KEY .
 
-  data MT_BUKRS type YTT_BUKRS .
-  data MT_KUNNR type YTT_KUNNR .
-  data MT_VKORG type YTT_VKORG .
-  data MD_FILE type STRING .
-  data MT_KNA1 type TY_KNA1 .
+    DATA mt_bukrs TYPE ytt_bukrs .
+    DATA mt_kunnr TYPE ytt_kunnr .
+    DATA mt_vkorg TYPE ytt_vkorg .
+    DATA md_file TYPE string .
+    DATA mt_kna1 TYPE ty_kna1 .
 
-  methods CONSTRUCTOR
-    importing
-      !IT_BUKRS type YTT_BUKRS
-      !IT_KUNNR type YTT_KUNNR
-      !IT_VKORG type YTT_VKORG
-      !ID_FILE type STRING
-      !IP_APPT_FILE type RLGRAP-FILENAME .
-  methods GET_KNA1
-    returning
-      value(RT_KNA1) type TY_KNA1 .
-  methods ADD_SHEET_TO_XLSX
-    importing
-      !IV_SHEETNAME type ZEXCEL_SHEET_TITLE optional
-      !IV_IS_THIS_SHEET1 type FLAG
-      !IV_CELL_A1 type CHAR30 optional
-      !IT_DATA type TABLE
-      !IO_EXCEL type ref to ZCL_EXCEL
-      !IT_ADDTL_COLS type TABLE optional .
-  methods DOWNLOAD_XLSX
-    importing
-      !IO_EXCEL type ref to ZCL_EXCEL
-    returning
-      value(RETURN) type ref to ZCX_EXCEL .
-  methods BUILD_EXCEL .
-  methods GET_MAPPING
-    importing
-      !IP_FILE type STRING
-    exporting
-      !IT_TAB type TY_TAB1
-    changing
-      !IT_ADRC type TY_ADRC
-      !IT_KNA1 type TY_KNA1
-      !IT_BUT000 type TY_BUT000
-      !IT_KNB5 type TY_KNB5
-      !IT_KNVV type TY_KNVV
-      !IT_KNVP type TY_KNVP
-      !IT_KNBW type TY_KNBW
-      !IT_KNVI type TY_KNVI
-      !IT_KNB1 type TY_KNB1
-      !IT_BUT100 type TY_BUT100
-      !IT_BUT020 type TY_BUT020
-      !IT_ADR2 type TY_ADR2
-      !IT_ADR6 type TY_ADR6
-      !IT_BUT0BK type TY_BUT0BK
-      !IT_BUT0IS type TY_BUT0IS
-      !IT_KNVA type TY_KNVA
-      !IT_KNA1ASS type TY_ASST
-      !IT_TAX type TY_TAX .
-  methods SEPRATE_DATA
-    importing
-      !IV_TABLE type STANDARD TABLE
-    changing
-      !CT_TABLE type STANDARD TABLE .
-  methods GET_BUT020
-    returning
-      value(RT_BUT020) type TY_BUT020 .
-  methods GET_BUT000
-    returning
-      value(RT_BUT000) type TY_BUT000 .
-  methods GET_BUT021
-    returning
-      value(RT_BUT021) type TY_BUT021 .
-  methods GET_ADRC
-    returning
-      value(RT_ADRC) type TY_ADRC .
-  methods GET_ADR2
-    returning
-      value(RT_ADR2) type TY_ADR2 .
-  methods GET_ADR6
-    returning
-      value(RT_ADR6) type TY_ADR6 .
-  methods GET_BUT0BK
-    returning
-      value(RT_BUT0BK) type TY_BUT0BK .
-  methods GET_KNA1_ASS
-    returning
-      value(RT_ASST) type TY_ASST .
-  methods GET_KNBW
-    returning
-      value(RT_KNBW) type TY_KNBW .
-  methods GET_KNB1
-    returning
-      value(RT_KNB1) type TY_KNB1 .
-  methods GET_KNB5
-    returning
-      value(RT_KNB5) type TY_KNB5 .
-  methods GET_KNVV
-    returning
-      value(RT_KNVV) type TY_KNVV .
-  methods GET_KNVP
-    returning
-      value(RT_KNVP) type TY_KNVP .
-  methods GET_TAX_DATA
-    importing
-      !IT_TAB type TY_KNA1
-    returning
-      value(RT_TAX) type TY_TAX .
-  methods GET_KNVI
-    returning
-      value(RT_KNVI) type TY_KNVI .
-  methods GET_KNVA
-    returning
-      value(RT_KNVA) type TY_KNVA .
-  methods GET_BUT0ID
-    returning
-      value(RT_BUT0ID) type TY_BUT0ID .
-  methods GET_BUT0IS
-    returning
-      value(RT_BUT0IS) type TY_BUT0IS .
-  methods GET_BUT100
-    returning
-      value(RT_BUT100) type TY_BUT100 .
-  methods ADD_SHEET_TO_XLSXV2
-    importing
-      !IV_SHEETNAME type ZEXCEL_SHEET_TITLE optional
-      !IV_IS_THIS_SHEET1 type FLAG
-      !IV_CELL_A1 type CHAR30 optional
-      !IT_DATA type TABLE
-      !IO_EXCEL type ref to ZCL_EXCEL
-      !IT_ADDTL_COLS type TABLE optional .
-  methods GET_MAPPING_DATA
-    importing
-      !IP_FILE type STRING
-    exporting
-      !IT_TAB type TY_TAB1
-    changing
-      !IT_ADRC type TY_ADRC
-      !IT_KNA1 type TY_KNA1
-      !IT_BUT000 type TY_BUT000
-      !IT_KNB5 type TY_KNB5
-      !IT_KNVV type TY_KNVV
-      !IT_KNVP type TY_KNVP
-      !IT_KNBW type TY_KNBW
-      !IT_KNVI type TY_KNVI
-      !IT_KNB1 type TY_KNB1
-      !IT_BUT100 type TY_BUT100
-      !IT_BUT020 type TY_BUT020
-      !IT_ADR2 type TY_ADR2
-      !IT_ADR6 type TY_ADR6
-      !IT_BUT0BK type TY_BUT0BK
-      !IT_BUT0IS type TY_BUT0IS
-      !IT_KNVA type TY_KNVA
-      !IT_KNA1ASS type TY_ASST
-      !IT_TAX type TY_TAX .
+    METHODS constructor
+      IMPORTING
+        !it_bukrs     TYPE ytt_bukrs
+        !it_kunnr     TYPE ytt_kunnr
+        !it_vkorg     TYPE ytt_vkorg
+        !id_file      TYPE string
+        !ip_appt_file TYPE rlgrap-filename .
+    METHODS get_kna1
+      RETURNING
+        VALUE(rt_kna1) TYPE ty_kna1 .
+    METHODS add_sheet_to_xlsx
+      IMPORTING
+        !iv_sheetname      TYPE zexcel_sheet_title OPTIONAL
+        !iv_is_this_sheet1 TYPE flag
+        !iv_cell_a1        TYPE char30 OPTIONAL
+        !it_data           TYPE table
+        !io_excel          TYPE REF TO zcl_excel
+        !it_addtl_cols     TYPE table OPTIONAL .
+    METHODS download_xlsx
+      IMPORTING
+        !io_excel     TYPE REF TO zcl_excel
+      RETURNING
+        VALUE(return) TYPE REF TO zcx_excel .
+    METHODS build_excel .
+    METHODS get_mapping
+      IMPORTING
+        !ip_file    TYPE string
+      EXPORTING
+        !it_tab     TYPE ty_tab1
+      CHANGING
+        !it_adrc    TYPE ty_adrc
+        !it_kna1    TYPE ty_kna1
+        !it_but000  TYPE ty_but000
+        !it_knb5    TYPE ty_knb5
+        !it_knvv    TYPE ty_knvv
+        !it_knvp    TYPE ty_knvp
+        !it_knbw    TYPE ty_knbw
+        !it_knvi    TYPE ty_knvi
+        !it_knb1    TYPE ty_knb1
+        !it_but100  TYPE ty_but100
+        !it_but020  TYPE ty_but020
+        !it_adr2    TYPE ty_adr2
+        !it_adr6    TYPE ty_adr6
+        !it_but0bk  TYPE ty_but0bk
+        !it_but0is  TYPE ty_but0is
+        !it_knva    TYPE ty_knva
+        !it_kna1ass TYPE ty_asst
+        !it_tax     TYPE ty_tax .
+    METHODS seprate_data
+      IMPORTING
+        !iv_table TYPE STANDARD TABLE
+      CHANGING
+        !ct_table TYPE STANDARD TABLE .
+    METHODS get_but020
+      RETURNING
+        VALUE(rt_but020) TYPE ty_but020 .
+    METHODS get_but000
+      RETURNING
+        VALUE(rt_but000) TYPE ty_but000 .
+    METHODS get_but021
+      RETURNING
+        VALUE(rt_but021) TYPE ty_but021 .
+    METHODS get_adrc
+      RETURNING
+        VALUE(rt_adrc) TYPE ty_adrc .
+    METHODS get_adr2
+      RETURNING
+        VALUE(rt_adr2) TYPE ty_adr2 .
+    METHODS get_adr6
+      RETURNING
+        VALUE(rt_adr6) TYPE ty_adr6 .
+    METHODS get_but0bk
+      RETURNING
+        VALUE(rt_but0bk) TYPE ty_but0bk .
+    METHODS get_kna1_ass
+      RETURNING
+        VALUE(rt_asst) TYPE ty_asst .
+    METHODS get_knbw
+      RETURNING
+        VALUE(rt_knbw) TYPE ty_knbw .
+    METHODS get_knb1
+      RETURNING
+        VALUE(rt_knb1) TYPE ty_knb1 .
+    METHODS get_knb5
+      RETURNING
+        VALUE(rt_knb5) TYPE ty_knb5 .
+    METHODS get_knvv
+      RETURNING
+        VALUE(rt_knvv) TYPE ty_knvv .
+    METHODS get_knvp
+      RETURNING
+        VALUE(rt_knvp) TYPE ty_knvp .
+    METHODS get_tax_data
+      IMPORTING
+        !it_tab       TYPE ty_kna1
+      RETURNING
+        VALUE(rt_tax) TYPE ty_tax .
+    METHODS get_knvi
+      RETURNING
+        VALUE(rt_knvi) TYPE ty_knvi .
+    METHODS get_knva
+      RETURNING
+        VALUE(rt_knva) TYPE ty_knva .
+    METHODS get_but0id
+      RETURNING
+        VALUE(rt_but0id) TYPE ty_but0id .
+    METHODS get_but0is
+      RETURNING
+        VALUE(rt_but0is) TYPE ty_but0is .
+    METHODS get_but100
+      RETURNING
+        VALUE(rt_but100) TYPE ty_but100 .
+    METHODS add_sheet_to_xlsxv2
+      IMPORTING
+        !iv_sheetname      TYPE zexcel_sheet_title OPTIONAL
+        !iv_is_this_sheet1 TYPE flag
+        !iv_cell_a1        TYPE char30 OPTIONAL
+        !it_data           TYPE table
+        !io_excel          TYPE REF TO zcl_excel
+        !it_addtl_cols     TYPE table OPTIONAL .
+    METHODS get_mapping_data
+      IMPORTING
+        !ip_file    TYPE string
+      EXPORTING
+        !it_tab     TYPE ty_tab1
+      CHANGING
+        !it_adrc    TYPE ty_adrc
+        !it_kna1    TYPE ty_kna1
+        !it_but000  TYPE ty_but000
+        !it_knb5    TYPE ty_knb5
+        !it_knvv    TYPE ty_knvv
+        !it_knvp    TYPE ty_knvp
+        !it_knbw    TYPE ty_knbw
+        !it_knvi    TYPE ty_knvi
+        !it_knb1    TYPE ty_knb1
+        !it_but100  TYPE ty_but100
+        !it_but020  TYPE ty_but020
+        !it_adr2    TYPE ty_adr2
+        !it_adr6    TYPE ty_adr6
+        !it_but0bk  TYPE ty_but0bk
+        !it_but0is  TYPE ty_but0is
+        !it_knva    TYPE ty_knva
+        !it_kna1ass TYPE ty_asst
+        !it_tax     TYPE ty_tax .
   PROTECTED SECTION.
-private section.
+  PRIVATE SECTION.
 
-  data MT_APPT_FILE type RLGRAP-FILENAME .
+    DATA mt_appt_file TYPE rlgrap-filename .
 ENDCLASS.
 
 
 
-CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
+CLASS zcl_mdg_extractor_customer IMPLEMENTATION.
 
 
   METHOD add_sheet_to_xlsx.
-     DATA: lo_worksheet              TYPE REF TO zcl_excel_worksheet,
+    DATA: lo_worksheet              TYPE REF TO zcl_excel_worksheet,
           lt_field_catalog          TYPE zexcel_t_fieldcatalog,
           lt_field_catalog1         TYPE zexcel_t_fieldcatalog,
           ls_field_catalog          TYPE zexcel_s_fieldcatalog,
@@ -1732,29 +1732,29 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
     IF mt_kna1 IS NOT INITIAL.
 * Select data from adr2 table
       SELECT
-        kna1~kunnr         AS source_id,
-        kna1~adrnr         AS source_addrnumber,
+        kna1~kunnr         AS source_id
+        kna1~adrnr         AS source_addrnumber
 *        adr2~date_from        ,
-        adr2~consnumber       ,
-        adr2~addrnumber       ,
-        adr2~country          ,
-        adr2~flgdefault       ,
-        adr2~flg_nouse        ,
-        adr2~home_flag        ,
-        adr2~tel_number       ,
-        adr2~tel_extens       ,
-        adr2~telnr_long       ,
-        adr2~telnr_call       ,
-        adr2~dft_receiv       ,
-        adr2~r3_user          ,
-        adr2~valid_from       ,
+        adr2~consnumber
+        adr2~addrnumber
+        adr2~country
+        adr2~flgdefault
+        adr2~flg_nouse
+        adr2~home_flag
+        adr2~tel_number
+        adr2~tel_extens
+        adr2~telnr_long
+        adr2~telnr_call
+        adr2~dft_receiv
+        adr2~r3_user
+        adr2~valid_from
         adr2~valid_to
+        INTO CORRESPONDING FIELDS OF TABLE rt_adr2
          FROM kna1
          INNER JOIN adr2
            ON adr2~addrnumber = kna1~adrnr
-         INTO CORRESPONDING FIELDS OF TABLE @rt_adr2
-         FOR ALL ENTRIES IN @mt_kna1
-         WHERE kna1~kunnr = @mt_kna1-source_id. "LIFNR
+                  FOR ALL ENTRIES IN mt_kna1
+         WHERE kna1~kunnr = mt_kna1-source_id. "LIFNR
     ELSE.
 *      MESSAGE 'No data found in kna1 .' TYPE 'S' DISPLAY LIKE 'I'.
     ENDIF.
@@ -1762,9 +1762,9 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 *    IF rt_adr2 IS INITIAL.
 *      MESSAGE 'Data not found in ADR2 table..' TYPE 'I' DISPLAY LIKE 'I'.  " Display message as error
 *    ENDIF.
-
     SORT rt_adr2 BY addrnumber.
-    LOOP AT rt_adr2 ASSIGNING FIELD-SYMBOL(<fs_adr2>).
+    FIELD-SYMBOLS <fs_adr2> TYPE ty_adr2_str.
+    LOOP AT rt_adr2 ASSIGNING <fs_adr2>.
       <fs_adr2>-date_from = '00010101'.
     ENDLOOP.
   ENDMETHOD.
@@ -1776,31 +1776,32 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
     IF mt_kna1 IS NOT INITIAL.
 * Select data from adr6 table
       SELECT
-        kna1~kunnr         AS source_id,
-        kna1~adrnr         AS source_addrnumber,
+        kna1~kunnr         AS source_id
+        kna1~adrnr         AS source_addrnumber
 *        adr6~date_from      ,
-        adr6~consnumber     ,
+        adr6~consnumber
 *        adr6~addrnumber     ,
-        adr6~flgdefault     ,
-        adr6~flg_nouse      ,
-        adr6~home_flag      ,
-        adr6~smtp_addr      ,
-        adr6~smtp_srch      ,
-        adr6~dft_receiv     ,
-        adr6~r3_user        ,
-        adr6~encode         ,
-        adr6~tnef           ,
-        adr6~valid_from     ,
+        adr6~flgdefault
+        adr6~flg_nouse
+        adr6~home_flag
+        adr6~smtp_addr
+        adr6~smtp_srch
+        adr6~dft_receiv
+        adr6~r3_user
+        adr6~encode
+        adr6~tnef
+        adr6~valid_from
         adr6~valid_to
+        INTO CORRESPONDING FIELDS OF TABLE rt_adr6
         FROM kna1
         INNER JOIN adr6
           ON adr6~addrnumber = kna1~adrnr
-       INTO CORRESPONDING FIELDS OF TABLE @rt_adr6
-        FOR ALL ENTRIES IN @mt_kna1
-        WHERE kna1~kunnr = @mt_kna1-source_id.
+        FOR ALL ENTRIES IN mt_kna1
+        WHERE kna1~kunnr = mt_kna1-source_id.
     ENDIF.
     SORT Rt_adr6 BY addrnumber.
-    LOOP AT rt_adr6 ASSIGNING FIELD-SYMBOL(<fs_adr6>).
+    FIELD-SYMBOLS <fs_adr6> TYPE ty_adr6_str.
+    LOOP AT rt_adr6 ASSIGNING <fs_adr6>.
       <fs_adr6>-date_from = '00010101'.
     ENDLOOP.
   ENDMETHOD.
@@ -1810,121 +1811,224 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 
     DATA:lv_date_c TYPE char10,
          ls_adrc   TYPE ty_adrc_str.
+    TYPES: BEGIN OF ty_adrc,
+             lifnr            TYPE lifnr,
+             adrnr            TYPE ad_addrnum,
+             nation           TYPE adrc-nation,
+             date_to          TYPE adrc-date_to,
+             title            TYPE adrc-title,
+             name1            TYPE adrc-name1,
+             name2            TYPE adrc-name2,
+             name3            TYPE adrc-name3,
+             name4            TYPE adrc-name4,
+             name_text        TYPE adrc-name_text,
+             name_co          TYPE adrc-name_co,
+             city1            TYPE adrc-city1,
+             city2            TYPE adrc-city2,
+             city_code        TYPE adrc-city_code,
+             cityp_code       TYPE adrc-cityp_code,
+             home_city        TYPE adrc-home_city,
+             cityh_code       TYPE adrc-cityh_code,
+             chckstatus       TYPE adrc-chckstatus,
+             regiogroup       TYPE adrc-regiogroup,
+             post_code1       TYPE adrc-post_code1,
+             post_code2       TYPE adrc-post_code2,
+             post_code3       TYPE adrc-post_code3,
+             pcode1_ext       TYPE adrc-pcode1_ext,
+             pcode2_ext       TYPE adrc-pcode2_ext,
+             pcode3_ext       TYPE adrc-pcode3_ext,
+             po_box           TYPE adrc-po_box,
+             dont_use_p       TYPE adrc-dont_use_p,
+             po_box_num       TYPE adrc-po_box_num,
+             po_box_loc       TYPE adrc-po_box_loc,
+             city_code2       TYPE adrc-city_code2,
+             po_box_reg       TYPE adrc-po_box_reg,
+             po_box_cty       TYPE adrc-po_box_cty,
+             postalarea       TYPE adrc-postalarea,
+             transpzone       TYPE adrc-transpzone,
+             street           TYPE adrc-street,
+             dont_use_s       TYPE adrc-dont_use_s,
+             streetcode       TYPE adrc-streetcode,
+             streetabbr       TYPE adrc-streetabbr,
+             house_num1       TYPE adrc-house_num1,
+             house_num2       TYPE adrc-house_num2,
+             house_num3       TYPE adrc-house_num3,
+             str_suppl1       TYPE adrc-str_suppl1,
+             str_suppl2       TYPE adrc-str_suppl2,
+             str_suppl3       TYPE adrc-str_suppl3,
+             location         TYPE adrc-location,
+             building         TYPE adrc-building,
+             floor            TYPE adrc-floor,
+             roomnumber       TYPE adrc-roomnumber,
+             country          TYPE adrc-country,
+             langu            TYPE adrc-langu,
+             region           TYPE adrc-region,
+             addr_group       TYPE adrc-addr_group,
+             flaggroups       TYPE adrc-flaggroups,
+             pers_addr        TYPE adrc-pers_addr,
+             sort1            TYPE adrc-sort1,
+             sort2            TYPE adrc-sort2,
+             sort_phn         TYPE adrc-sort_phn,
+             deflt_comm       TYPE adrc-deflt_comm,
+             tel_number       TYPE adrc-tel_number,
+             tel_extens       TYPE adrc-tel_extens,
+             fax_number       TYPE adrc-fax_number,
+             fax_extens       TYPE adrc-fax_extens,
+             flagcomm2        TYPE adrc-flagcomm2,
+             flagcomm3        TYPE adrc-flagcomm3,
+             flagcomm4        TYPE adrc-flagcomm4,
+             flagcomm5        TYPE adrc-flagcomm5,
+             flagcomm6        TYPE adrc-flagcomm6,
+             flagcomm7        TYPE adrc-flagcomm7,
+             flagcomm8        TYPE adrc-flagcomm8,
+             flagcomm9        TYPE adrc-flagcomm9,
+             flagcomm10       TYPE adrc-flagcomm10,
+             flagcomm11       TYPE adrc-flagcomm11,
+             flagcomm12       TYPE adrc-flagcomm12,
+             flagcomm13       TYPE adrc-flagcomm13,
+             addrorigin       TYPE adrc-addrorigin,
+             mc_name1         TYPE adrc-mc_name1,
+             mc_city1         TYPE adrc-mc_city1,
+             mc_street        TYPE adrc-mc_street,
+             extension1       TYPE adrc-extension1,
+             extension2       TYPE adrc-extension2,
+             time_zone        TYPE adrc-time_zone,
+             taxjurcode       TYPE adrc-taxjurcode,
+             address_id       TYPE adrc-address_id,
+             langu_crea       TYPE adrc-langu_crea,
+             adrc_uuid        TYPE adrc-adrc_uuid,
+             uuid_belated     TYPE adrc-uuid_belated,
+             id_category      TYPE adrc-id_category,
+             adrc_err_status  TYPE adrc-adrc_err_status,
+             po_box_lobby     TYPE adrc-po_box_lobby,
+             deli_serv_type   TYPE adrc-deli_serv_type,
+             deli_serv_number TYPE adrc-deli_serv_number,
+             county_code      TYPE adrc-county_code,
+             county           TYPE adrc-county,
+             township_code    TYPE adrc-township_code,
+             township         TYPE adrc-township,
+             mc_county        TYPE adrc-mc_county,
+             mc_township      TYPE adrc-mc_township,
+             xpcpt            TYPE adrc-xpcpt,
+             duns             TYPE adrc-duns,
+             dunsp4           TYPE adrc-dunsp4,
+           END OF ty_adrc.
+    DATA: lwt_adrc TYPE STANDARD TABLE OF ty_adrc.
 *    DATA(tt_kna1) = me->get_kna1( ).
-
-    IF mt_kna1 IS NOT INITIAL.
 * Select data from adrc table
+    IF mt_kna1 IS NOT INITIAL.
       SELECT
-         kna1~kunnr         AS source_id,
-         kna1~adrnr         AS source_addrnumber,
-         adrc~nation            ,
-         adrc~date_to           ,
-         adrc~title             ,
-         adrc~name1             ,
-         adrc~name2             ,
-         adrc~name3             ,
-         adrc~name4             ,
-         adrc~name_text         ,
-         adrc~name_co           ,
-         adrc~city1             ,
-         adrc~city2             ,
-         adrc~city_code         ,
-         adrc~cityp_code        ,
-         adrc~home_city         ,
-         adrc~cityh_code        ,
-         adrc~chckstatus        ,
-         adrc~regiogroup        ,
-         adrc~post_code1        ,
-         adrc~post_code2        ,
-         adrc~post_code3        ,
-         adrc~pcode1_ext        ,
-         adrc~pcode2_ext        ,
-         adrc~pcode3_ext        ,
-         adrc~po_box            ,
-         adrc~dont_use_p        ,
-         adrc~po_box_num        ,
-         adrc~po_box_loc        ,
-         adrc~city_code2        ,
-         adrc~po_box_reg        ,
-         adrc~po_box_cty        ,
-         adrc~postalarea        ,
-         adrc~transpzone        ,
-         adrc~street            ,
-         adrc~dont_use_s        ,
-         adrc~streetcode        ,
-         adrc~streetabbr        ,
-         adrc~house_num1        ,
-         adrc~house_num2        ,
-         adrc~house_num3        ,
-         adrc~str_suppl1        ,
-         adrc~str_suppl2        ,
-         adrc~str_suppl3        ,
-         adrc~location          ,
-         adrc~building          ,
-         adrc~floor             ,
-         adrc~roomnumber        ,
-         adrc~country           ,
-         adrc~langu             ,
-         adrc~region            ,
-         adrc~addr_group        ,
-         adrc~flaggroups        ,
-         adrc~pers_addr         ,
-         adrc~sort1             ,
-         adrc~sort2             ,
-         adrc~sort_phn          ,
-         adrc~deflt_comm        ,
-         adrc~tel_number        ,
-         adrc~tel_extens        ,
-         adrc~fax_number        ,
-         adrc~fax_extens        ,
-         adrc~flagcomm2         ,
-         adrc~flagcomm3         ,
-         adrc~flagcomm4         ,
-         adrc~flagcomm5         ,
-         adrc~flagcomm6         ,
-         adrc~flagcomm7         ,
-         adrc~flagcomm8         ,
-         adrc~flagcomm9         ,
-         adrc~flagcomm10        ,
-         adrc~flagcomm11        ,
-         adrc~flagcomm12        ,
-         adrc~flagcomm13        ,
-         adrc~addrorigin        ,
-         adrc~mc_name1          ,
-         adrc~mc_city1          ,
-         adrc~mc_street         ,
-         adrc~extension1        ,
-         adrc~extension2        ,
-         adrc~time_zone         ,
-         adrc~taxjurcode        ,
-         adrc~address_id        ,
-         adrc~langu_crea        ,
-         adrc~adrc_uuid         ,
-         adrc~uuid_belated      ,
-         adrc~id_category       ,
-         adrc~adrc_err_status   ,
-         adrc~po_box_lobby      ,
-         adrc~deli_serv_type    ,
-         adrc~deli_serv_number  ,
-         adrc~county_code       ,
-         adrc~county            ,
-         adrc~township_code     ,
-         adrc~township          ,
-         adrc~mc_county         ,
-         adrc~mc_township       ,
-         adrc~xpcpt             ,
-         adrc~duns              ,
+         kna1~kunnr         AS source_id
+         kna1~adrnr         AS source_addrnumber
+         adrc~nation
+         adrc~date_to
+         adrc~title
+         adrc~name1
+         adrc~name2
+         adrc~name3
+         adrc~name4
+         adrc~name_text
+         adrc~name_co
+         adrc~city1
+         adrc~city2
+         adrc~city_code
+         adrc~cityp_code
+         adrc~home_city
+         adrc~cityh_code
+         adrc~chckstatus
+         adrc~regiogroup
+         adrc~post_code1
+         adrc~post_code2
+         adrc~post_code3
+         adrc~pcode1_ext
+         adrc~pcode2_ext
+         adrc~pcode3_ext
+         adrc~po_box
+         adrc~dont_use_p
+         adrc~po_box_num
+         adrc~po_box_loc
+         adrc~city_code2
+         adrc~po_box_reg
+         adrc~po_box_cty
+         adrc~postalarea
+         adrc~transpzone
+         adrc~street
+         adrc~dont_use_s
+         adrc~streetcode
+         adrc~streetabbr
+         adrc~house_num1
+         adrc~house_num2
+         adrc~house_num3
+         adrc~str_suppl1
+         adrc~str_suppl2
+         adrc~str_suppl3
+         adrc~location
+         adrc~building
+         adrc~floor
+         adrc~roomnumber
+         adrc~country
+         adrc~langu
+         adrc~region
+         adrc~addr_group
+         adrc~flaggroups
+         adrc~pers_addr
+         adrc~sort1
+         adrc~sort2
+         adrc~sort_phn
+         adrc~deflt_comm
+         adrc~tel_number
+         adrc~tel_extens
+         adrc~fax_number
+         adrc~fax_extens
+         adrc~flagcomm2
+         adrc~flagcomm3
+         adrc~flagcomm4
+         adrc~flagcomm5
+         adrc~flagcomm6
+         adrc~flagcomm7
+         adrc~flagcomm8
+         adrc~flagcomm9
+         adrc~flagcomm10
+         adrc~flagcomm11
+         adrc~flagcomm12
+         adrc~flagcomm13
+         adrc~addrorigin
+         adrc~mc_name1
+         adrc~mc_city1
+         adrc~mc_street
+         adrc~extension1
+         adrc~extension2
+         adrc~time_zone
+         adrc~taxjurcode
+         adrc~address_id
+         adrc~langu_crea
+         adrc~adrc_uuid
+         adrc~uuid_belated
+         adrc~id_category
+         adrc~adrc_err_status
+         adrc~po_box_lobby
+         adrc~deli_serv_type
+         adrc~deli_serv_number
+         adrc~county_code
+         adrc~county
+         adrc~township_code
+         adrc~township
+         adrc~mc_county
+         adrc~mc_township
+         adrc~xpcpt
+         adrc~duns
          adrc~dunsp4
+          INTO TABLE lwt_adrc
           FROM kna1
           INNER JOIN adrc
             ON adrc~addrnumber = kna1~adrnr
-          INTO TABLE @DATA(lwt_adrc)
-          FOR ALL ENTRIES IN @mt_kna1
-          WHERE kna1~kunnr = @mt_kna1-source_id.
+          FOR ALL ENTRIES IN mt_kna1
+          WHERE kna1~kunnr = mt_kna1-source_id.
     ENDIF.
     SORT rt_adrc BY addrnumber.
+    FIELD-SYMBOLS <fs_adrc> TYPE ty_adrc.
     " Now convert date to timestamp
-    LOOP AT lwt_adrc  ASSIGNING FIELD-SYMBOL(<fs_adrc>).
+    LOOP AT lwt_adrc  ASSIGNING <fs_adrc>.
       ls_adrc = CORRESPONDING #( <fs_adrc> ).
       ls_adrc-date_from = '00010101'.
       lv_date_c = |{ <fs_adrc>-date_to DATE = USER }|.
@@ -1938,27 +2042,41 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 
   METHOD get_but000.
 *    DATA(tt_kna1) = me->get_kna1( ).
+    TYPES: BEGIN OF ty_data,
+             source_id TYPE kna1-kunnr,     " aliased
+             natpers   TYPE but000-natpers,
+             name_org1 TYPE but000-name_org1,
+             name_org2 TYPE but000-name_org2,
+             name_org3 TYPE but000-name_org3,
+             name_org4 TYPE but000-name_org4,
+             name1     TYPE adrc-name1,
+             name2     TYPE adrc-name2,
+             name3     TYPE adrc-name3,
+             name4     TYPE adrc-name4,
+             city1     TYPE adrc-city1,
+           END OF ty_data.
+    DATA lt_data TYPE TABLE OF ty_data.
+    FIELD-SYMBOLS <fs_but000> TYPE ty_data.
     IF mt_kna1 IS NOT INITIAL.
-      SELECT kna1~kunnr AS source_id,
-       but000~natpers,
-       but000~name_org1,
-       but000~name_org2,
-       but000~name_org3,
-       but000~name_org4,
-       adrc~name1,
-       adrc~name2,
-       adrc~name3,
-       adrc~name4,
+      SELECT
+       kna1~kunnr AS source_id
+       but000~natpers
+       but000~name_org1
+       but000~name_org2
+       but000~name_org3
+       but000~name_org4
+       adrc~name1
+       adrc~name2
+       adrc~name3
+       adrc~name4
        adrc~city1
-  FROM kna1
-  LEFT OUTER JOIN but000
-    ON but000~partner = kna1~kunnr
-  LEFT OUTER JOIN adrc
-    ON adrc~addrnumber = kna1~adrnr
-  FOR ALL ENTRIES IN @mt_kna1
-  WHERE kna1~kunnr = @mt_kna1-kunnr
-    AND adrc~nation = ' '
-  INTO TABLE @DATA(lt_data).
+       INTO TABLE lt_data
+      FROM kna1
+      LEFT OUTER JOIN but000 ON but000~partner = kna1~kunnr
+      LEFT OUTER JOIN adrc ON adrc~addrnumber = kna1~adrnr
+       AND adrc~nation = ' '
+      FOR ALL ENTRIES IN mt_kna1
+      WHERE kna1~kunnr = mt_kna1-kunnr .
 
 *      SELECT kna1~kunnr       AS source_id,
 *             but000~natpers   AS natpers,
@@ -2016,7 +2134,7 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 *    LOOP AT rt_but000 ASSIGNING FIELD-SYMBOL(<fs_but000>).
 *      <fs_but000>-type = '2'.
 *      <fs_but000>-bu_group = 'Z120'.
-    LOOP AT lt_data ASSIGNING FIELD-SYMBOL(<fs_but000>).
+    LOOP AT lt_data ASSIGNING <fs_but000>.
       CLEAR ls_but000.
 
       ls_but000-type = '2'.
@@ -2061,24 +2179,29 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 
   METHOD get_but020.
 *    DATA(tt_kna1) = me->get_kna1( ).
-
-    IF mt_kna1 IS NOT INITIAL.
+    TYPES: BEGIN OF ty_adrc,
+             kunnr      TYPE kna1-kunnr,
+             addrnumber TYPE kna1-adrnr,
+           END OF ty_adrc.
+    FIELD-SYMBOLS <fs_but020> TYPE  ty_adrc.
+    DATA: gt_but020 TYPE STANDARD TABLE OF ty_adrc.
 * Select data from adrc table
-      SELECT kna1~kunnr,
+    IF mt_kna1 IS NOT INITIAL.
+      SELECT kna1~kunnr
            adrc~addrnumber
+          INTO TABLE gt_but020
       FROM adrc
       INNER JOIN kna1
          ON adrc~addrnumber = kna1~adrnr
-          FOR ALL ENTRIES IN @mt_kna1
-            WHERE addrnumber = @mt_kna1-adrnr
-              AND kna1~kunnr = @mt_kna1-source_id
-               AND adrc~nation = ' '
-          INTO TABLE @DATA(gt_but020).
+          FOR ALL ENTRIES IN mt_kna1
+            WHERE addrnumber = mt_kna1-adrnr
+              AND kna1~kunnr = mt_kna1-source_id
+               AND adrc~nation = ' '.
     ENDIF.
-
-    CONCATENATE sy-datum '000000' INTO DATA(lv_valid_from).
-
-    LOOP AT gt_but020 ASSIGNING FIELD-SYMBOL(<fs_but020>).
+    DATA: lv_valid_from TYPE char14.
+    CONCATENATE sy-datum '000000' INTO lv_valid_from.
+*    CONCATENATE sy-datum '000000' INTO DATA(lv_valid_from).
+    LOOP AT gt_but020 ASSIGNING <fs_but020>.
       APPEND VALUE ty_but020_str(
           source_id         = <fs_but020>-kunnr
           source_addrnumber = <fs_but020>-addrnumber
@@ -2093,26 +2216,35 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 
   METHOD get_but021.
 
-
 *    DATA(tt_kna1) = me->get_kna1( ).
+    TYPES: BEGIN OF ty_gt_but021,
+             kunnr      TYPE kna1-kunnr,
+             addrnumber TYPE adrc-addrnumber,
+           END OF ty_gt_but021.
+
+    DATA: gt_but021     TYPE STANDARD TABLE OF ty_gt_but021,
+          gs_but021     TYPE ty_gt_but021,
+          lv_valid_from TYPE char14.
+    FIELD-SYMBOLS <fs_but021> TYPE ty_gt_but021.
 
     IF mt_kna1 IS NOT INITIAL.
-      SELECT kna1~kunnr,
+      SELECT
+           kna1~kunnr
            adrc~addrnumber
+            INTO TABLE gt_but021
       FROM adrc
-      INNER JOIN kna1
-         ON adrc~addrnumber = kna1~adrnr
-          FOR ALL ENTRIES IN @mt_kna1
-            WHERE addrnumber = @mt_kna1-adrnr
-              AND kna1~kunnr = @mt_kna1-source_id
-              AND adrc~nation = ' '
+      INNER JOIN kna1 ON adrc~addrnumber = kna1~adrnr
+          FOR ALL ENTRIES IN mt_kna1
+            WHERE addrnumber = mt_kna1-adrnr
+              AND kna1~kunnr = mt_kna1-source_id
+              AND adrc~nation = ' '.
 *          INTO CORRESPONDING FIELDS OF lt_but021.
-          INTO TABLE @DATA(gt_but021).
+
     ENDIF.
+    CONCATENATE sy-datum '000000' INTO lv_valid_from.
+*    CONCATENATE sy-datum '000000' INTO DATA(lv_valid_from).
 
-    CONCATENATE sy-datum '000000' INTO DATA(lv_valid_from).
-
-    LOOP AT gt_but021 ASSIGNING FIELD-SYMBOL(<fs_but021>).
+    LOOP AT gt_but021 ASSIGNING <fs_but021>.
       APPEND VALUE ty_but021_str(
           source_id         = <fs_but021>-kunnr
           valid_to          = '99991231000000'
@@ -2129,41 +2261,43 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 *    DATA(tt_kna1) = me->get_kna1( ).
     IF mt_kna1 IS NOT INITIAL.
       SELECT
-       a~kunnr AS source_id,
-       a~banks,
-       a~bankl,
-       a~bankn,
-       a~bkont,
-       a~bkref,
-       a~koinh,
-       a~ebpp_accname,
-       a~kovon AS bk_valid_from,
-       a~kobis AS bk_valid_to  ,
+       a~kunnr AS source_id
+       a~banks
+       a~bankl
+       a~bankn
+       a~bkont
+       a~bkref
+       a~koinh
+       a~ebpp_accname
+       a~kovon AS bk_valid_from
+       a~kobis AS bk_valid_to
        b~iban
+      INTO CORRESPONDING FIELDS OF TABLE rt_but0bk
       FROM knbk AS a
       LEFT OUTER JOIN tiban AS b
         ON  a~banks = b~banks
         AND a~bankl = b~bankl
         AND a~bankn = b~bankn
         AND a~bkont = b~bkont
-         FOR ALL ENTRIES IN @mt_kna1
-    WHERE a~kunnr = @mt_kna1-source_id
-  INTO CORRESPONDING FIELDS OF TABLE @rt_but0bk.
+     FOR ALL ENTRIES IN mt_kna1
+    WHERE a~kunnr = mt_kna1-source_id .
     ENDIF.
   ENDMETHOD.
 
 
   METHOD get_but0id.
-    DATA: ls_BUT0ID  TYPE ty_BUT0ID_str.
+    DATA: ls_but0id TYPE ty_BUT0ID_str,
+          gt_but0id TYPE TABLE OF  but0id.
+    FIELD-SYMBOLS <fs_but0id> TYPE but0id.
     IF mt_kna1 IS NOT INITIAL.
-      SELECT * FROM but0id INTO TABLE @DATA(gt_BUT0ID)
-        FOR ALL ENTRIES IN @mt_kna1
-        WHERE partner =  @mt_kna1-kunnr.
+      SELECT * FROM but0id INTO TABLE gt_but0id
+        FOR ALL ENTRIES IN mt_kna1
+        WHERE partner =  mt_kna1-kunnr.
     ENDIF.
-    LOOP AT gt_BUT0ID ASSIGNING FIELD-SYMBOL(<fs_BUT0ID>).
-      ls_BUT0ID = CORRESPONDING #( <fs_BUT0ID> ). " Copies fields with same name
-      ls_BUT0ID-source_id      = <fs_BUT0ID>-partner.
-      APPEND ls_BUT0ID TO rt_BUT0ID.
+    LOOP AT gt_BUT0ID ASSIGNING <fs_BUT0ID>.
+      ls_but0id = CORRESPONDING #( <fs_BUT0ID> ). " Copies fields with same name
+      ls_but0id-source_id      = <fs_BUT0ID>-partner.
+      APPEND ls_but0id TO rt_but0id.
       CLEAR: <fs_BUT0ID>-partner.
     ENDLOOP.
 
@@ -2172,17 +2306,20 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 
 
   METHOD get_but0is.
-    DATA: ls_BUT0IS  TYPE ty_BUT0IS_str.
+    DATA: ls_but0is TYPE ty_but0is_str,
+          gt_but0is TYPE TABLE OF  but0is.
+    FIELD-SYMBOLS <fs_but0is> TYPE but0is.
+
     IF mt_kna1 IS NOT INITIAL.
-      SELECT * FROM but0is INTO TABLE @DATA(gt_BUT0IS)
-        FOR ALL ENTRIES IN @mt_kna1
-        WHERE partner = @mt_kna1-kunnr.
+      SELECT * FROM but0is INTO TABLE gt_but0is
+        FOR ALL ENTRIES IN mt_kna1
+        WHERE partner = mt_kna1-kunnr.
     ENDIF.
-    LOOP AT gt_BUT0IS ASSIGNING FIELD-SYMBOL(<fs_BUT0IS>).
-      ls_BUT0IS = CORRESPONDING #( <fs_BUT0IS> ). " Copies fields with same name
-      ls_BUT0IS-source_id      = <fs_BUT0IS>-partner.
-      APPEND ls_BUT0IS TO rt_BUT0IS.
-      CLEAR: <fs_BUT0IS>-partner.
+    LOOP AT gt_but0is ASSIGNING <fs_but0is>.
+      ls_BUT0IS = CORRESPONDING #( <fs_but0is> ). " Copies fields with same name
+      ls_BUT0IS-source_id      = <fs_but0is>-partner.
+      APPEND ls_but0is TO rt_but0is.
+      CLEAR: <fs_but0is>-partner.
     ENDLOOP.
 
     SORT rt_BUT0IS BY source_id.
@@ -2191,6 +2328,22 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
 
   METHOD get_but100.
     DATA: ls_but100  TYPE ty_but100_str.
+
+    TYPES: BEGIN OF ty_but100,
+             kunnr      TYPE kna1-kunnr,
+             partner    TYPE but100-partner,
+             rltyp      TYPE but100-rltyp,
+             dfval      TYPE but100-dfval,
+             valid_from TYPE but100-valid_from,
+             valid_to   TYPE but100-valid_to,
+             role       TYPE but100-role,
+             authority  TYPE but100-authority,
+           END OF ty_but100.
+
+    DATA:  gt_but100 TYPE TABLE OF ty_but100.
+
+    FIELD-SYMBOLS <fs_but100> TYPE ty_but100.
+
 *    DATA(tt_kna1) = me->get_kna1( ).
 *    IF mt_kna1 IS NOT INITIAL.
 *      SELECT
@@ -2222,26 +2375,26 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
     IF mt_kna1 IS NOT INITIAL.
 
       SELECT
-             kna1~kunnr,
-             but100~partner,
-             but100~rltyp,
-             but100~dfval,
-             but100~valid_from,
-             but100~valid_to,
-             but100~role,
+             kna1~kunnr
+             but100~partner
+             but100~rltyp
+             but100~dfval
+             but100~valid_from
+             but100~valid_to
+             but100~role
              but100~authority
-        FROM kna1
+        INTO TABLE gt_but100
+                FROM kna1
         LEFT OUTER JOIN but100
           ON but100~partner = kna1~kunnr
-        FOR ALL ENTRIES IN @mt_kna1
-        WHERE kna1~kunnr = @mt_kna1-kunnr
-        INTO TABLE @DATA(gt_but100).
+        FOR ALL ENTRIES IN mt_kna1
+        WHERE kna1~kunnr = mt_kna1-kunnr.        .
 
-      LOOP AT gt_but100 ASSIGNING FIELD-SYMBOL(<fs_but100>).
+      LOOP AT gt_but100 ASSIGNING <fs_but100>.
 
         CLEAR ls_but100.
-        ls_but100 = CORRESPONDING #( <fs_but100> ).
-
+*        ls_but100 = CORRESPONDING #( <fs_but100> ).
+        MOVE-CORRESPONDING <fs_but100> TO ls_but100.
         " If BUT100 exists use PARTNER, otherwise use KUNNR
         IF <fs_but100>-partner IS NOT INITIAL.
           ls_but100-source_id = <fs_but100>-partner.
@@ -2472,9 +2625,9 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
          INNER JOIN knb1 ON knb1~kunnr = kna1~kunnr
          INNER JOIN knvv ON knvv~kunnr = kna1~kunnr
          INTO CORRESPONDING FIELDS OF TABLE @gt_kna1
-          WHERE kna1~kunnr IN @mt_kunnr and
+          WHERE kna1~kunnr IN @mt_kunnr AND
             ( knb1~bukrs IN @mt_bukrs
-            or knvv~vkorg IN @mt_vkorg ) .
+            OR knvv~vkorg IN @mt_vkorg ) .
 
       SORT gt_kna1 BY kunnr.
       DELETE gt_kna1 WHERE kunnr NOT IN mt_kunnr.
@@ -2709,7 +2862,7 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
    INNER JOIN knb1 ON knb1~kunnr = kna1~kunnr
    INTO CORRESPONDING FIELDS OF TABLE @gt_kna1
     WHERE kna1~kunnr IN @mt_kunnr
-      and knb1~bukrs IN @mt_bukrs.
+      AND knb1~bukrs IN @mt_bukrs.
 
     ELSEIF mt_vkorg IS NOT INITIAL  AND mt_bukrs IS INITIAL.
 
@@ -2918,7 +3071,7 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
    INNER JOIN knvv ON knvv~kunnr = kna1~kunnr
    INTO CORRESPONDING FIELDS OF TABLE @gt_kna1
     WHERE kna1~kunnr IN @mt_kunnr
-      and knvv~vkorg IN @mt_vkorg.
+      AND knvv~vkorg IN @mt_vkorg.
     ELSE.
       MESSAGE 'No Data found' TYPE 'I'.
     ENDIF.
@@ -4016,15 +4169,15 @@ CLASS ZCL_MDG_EXTRACTOR_CUSTOMER IMPLEMENTATION.
     ) TO lt_tables.
 
 
-APPEND VALUE #(
-      targ_struc = 'KNA1_ASSGMNT'
-      table_ref  = REF #( it_kna1ass )
-    ) TO lt_tables.
+    APPEND VALUE #(
+          targ_struc = 'KNA1_ASSGMNT'
+          table_ref  = REF #( it_kna1ass )
+        ) TO lt_tables.
 
-APPEND VALUE #(
-      targ_struc = 'DFKKBPTAXNUM'
-      table_ref  = REF #( it_tax )
-    ) TO lt_tables.
+    APPEND VALUE #(
+          targ_struc = 'DFKKBPTAXNUM'
+          table_ref  = REF #( it_tax )
+        ) TO lt_tables.
 
     "----------------------------------------------------------
     " Create generic mapping class
